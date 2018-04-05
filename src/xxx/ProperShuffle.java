@@ -84,4 +84,14 @@ public class ProperShuffle {
 	}
 	 
 
+	
+	public String printArray(int[] x, String  message, boolean syso) {
+		String ret =message;
+		for (int i = 0; i < x.length; i++) {
+			ret+=" "+x[i];
+		}
+		if(syso)
+			System.out.println(ret);
+		return ret;
+	}
 }
