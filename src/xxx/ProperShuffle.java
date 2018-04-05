@@ -1,11 +1,9 @@
 package xxx;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
+import java.io.BufferedReader; 
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.*;
-
-import com.sun.tools.xjc.reader.gbind.Sequence; 
+ 
 
 public class ProperShuffle {
 	static Random r = new Random(System.currentTimeMillis());
