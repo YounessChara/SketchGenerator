@@ -1,0 +1,96 @@
+#if("$!{packageName}"!="")package ${packageName};#end
+
+import java.io.*; 
+import java.util.*; 
+ 
+  
+public class ${className} {
+	#if("$!{v1}"!="") $v1.type $v1.variable ;#end
+	#if("$!{v2}"!="") $v2.type $v2.variable ;#end
+	#if("$!{v3}"!="") $v3.type $v3.variable ;#end
+	#if("$!{v4}"!="") $v4.type $v4.variable ;#end
+	#if("$!{v5}"!="") $v5.type $v5.variable ;#end
+	#if("$!{v6}"!="") $v6.type $v6.variable ;#end
+	 
+	public ${className}( 
+	#if("$!{v1}"!="") $v1.type $v1.variable , #end 
+	#if("$!{v2}"!="") $v2.type $v2.variable ,#end
+	#if("$!{v3}"!="") $v3.type $v3.variable ,#end
+	#if("$!{v4}"!="") $v4.type $v4.variable ,#end
+	#if("$!{v5}"!="") $v5.type $v5.variable ,#end
+	#if("$!{v6}"!="")  $v6.type $v6.variable ,#end  int caseNumber   ) {
+	#if("$!{v1}"!="")  this.$v1.variable = $v1.variable ;#end
+	#if("$!{v2}"!="")  this.$v2.variable = $v2.variable ;#end
+	#if("$!{v3}"!="")  this.$v3.variable = $v3.variable ;#end
+	#if("$!{v4}"!="")  this.$v4.variable = $v4.variable ;#end
+	#if("$!{v5}"!="")  this.$v5.variable = $v5.variable ;#end
+	#if("$!{v6}"!="")  this.$v6.variable = $v6.variable ;#end
+	} 
+
+	public static void main(String[] args) throws FileNotFoundException {
+		Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in))); 
+
+		PrintWriter pw = new PrintWriter("C:/Users/Youness/Downloads/"+ "${className}"+".out");
+		$v0.instance
+		for (int i = 1; i <= ${v0.variable}; ++i) {
+			#if("$!{v1}"!="") $v1.instance
+				$!{v1.loop} #end
+			
+			#if("$!{v2}"!="") $v2.instance 
+				$!{v2.loop}
+			#end 
+			#if("$!{v3}"!="") $v3.instance
+				$!{v3.loop} #end 
+			#if("$!{v4}"!="") $v4.instance
+				$!{v4.loop} #end 
+			#if("$!{v5}"!="") $v5.instance
+				$!{v5.loop} #end 
+			#if("$!{v6}"!="") $v6.instance
+				$!{v6.loop} #end 
+			 
+			
+			${className} testCase = new ${className}(	#if("$!{v1}"!="")  $v1.variable , #end 
+	#if("$!{v2}"!="")   $v2.variable ,#end
+	#if("$!{v3}"!="")   $v3.variable ,#end
+	#if("$!{v4}"!="")   $v4.variable ,#end
+	#if("$!{v5}"!="")   $v5.variable ,#end
+	#if("$!{v6}"!="")   $v6.variable ,#end i)  ;
+			String res = testCase.solve();
+			pw.println("Case #"+i+": "+ res.trim());
+			pw.flush();
+			System.out.println("Case #"+i+": "+ res.trim());
+		}
+		in.close();
+		pw.close();
+	}
+
+	private String solve() {
+		List<String> shots = dnpSolve(  ) ;
+		String ret = ""+ shots.size();
+		for(String shot:shots)
+			ret+="\n"+shot;
+		return ret;
+	}
+
+	
+	
+	private List<String> dnpSolve( ) {
+		 
+	 
+		return null;
+	}
+
+	
+	public String printArray(int[] x, String  message, boolean syso) {
+		String ret =message;
+		for (int i = 0; i < x.length; i++) {
+			ret+=" "+x[i];
+		}
+		if(syso)
+			System.out.println(ret);
+		return ret;
+	}
+
+	 
+
+}
